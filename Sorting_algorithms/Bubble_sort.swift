@@ -1,3 +1,4 @@
+// Пузырьковая сортировка
 func bubble_sort(_ arr: inout [Int]) {
     let n = arr.count
     // Проходим по всем элементам массива
