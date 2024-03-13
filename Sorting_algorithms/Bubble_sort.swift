@@ -1,4 +1,4 @@
-func bubbles_sort(_ arr: inout [Int]) {
+func bubble_sort(_ arr: inout [Int]) {
     var n = arr.count
     var swapped: Bool
     repeat {
