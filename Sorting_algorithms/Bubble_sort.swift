@@ -1,24 +1,14 @@
-// Пузырьковая сортировка
-func bubble_sort(_ arr: inout [Int]) {
-    let n = arr.count
-    // Проходим по всем элементам массива
-    for i in 0..<n {
-        // Установим флаг, который будет служить индикатором, были ли какие-либо обмены в этой итерации
-        var swapped = false
-        // Проходим по массиву сравнивая каждую пару соседних элементов
-        // и меняем их местами, если они находятся в неправильном порядке
-        for j in 0..<n - i - 1 {
-            if arr[j] > arr[j + 1] {
-                // Обмен значениями
-                let temp = arr[j]
-                arr[j] = arr[j + 1]
-                arr[j + 1] = temp
+func bubbles_sort(_ arr: inout [Int]) {
+    var n = arr.count
+    var swapped: Bool
+    repeat {
+        swapped = false
+        for i in 0..<n-1 {
+            if arr[i] > arr[i + 1] {
+                arr.swapAt(i, i + 1)
                 swapped = true
             }
         }
-        // Если в этой итерации не было ни одного обмена, то массив уже отсортирован
-        if !swapped {
-            break
-        }
-    }
+        n -= 1
+    } while swapped
 }
